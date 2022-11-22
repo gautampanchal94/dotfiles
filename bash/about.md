@@ -8,7 +8,9 @@ Configure [SSH](https://www.ssh.com/academy/ssh) for [GitHub](https://github.com
 
 Run following code for check [ssh_agent.sh](./bash/ssh_agent.sh) working,
 
-`$ echo $SSH_AUTH_SOCK`
+```sh
+$ echo $SSH_AUTH_SOCK
+```
 
 ### Theme
 
