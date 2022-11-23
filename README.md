@@ -5,6 +5,7 @@ Instructions for setting up Dotfiles
 **Table of Contents**
 
 - [Bash Files](#bash-files)
+- [Windows Terminal](#windows-terminal)
 
 ## Bash Files
 
@@ -26,3 +27,9 @@ done
 ```
 
 Read More about it [here](https://www.baeldung.com/linux/bashrc-add-files).
+
+## Windows Terminal
+
+Copy profile & scheme to `settings.json` in Windows Terminal.
+
+Read more about it [here](https://learn.microsoft.com/en-us/windows/terminal/)
