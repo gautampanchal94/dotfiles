@@ -899,3 +899,70 @@ shell:
 
   # Highlight window damage information.
   #highlight_damage: false
+
+# My Themes
+# Colors (Monokai Dark)
+colors:
+  # Default colors
+  primary:
+    background: '#272822'
+    foreground: '#F8F8F2'
+
+  # Normal colors
+  normal:
+   black:   '#272822'
+   red:     '#F92672'
+   green:   '#A6E22E'
+   yellow:  '#F4BF75'
+   blue:    '#66D9EF'
+   magenta: '#AE81FF'
+   cyan:    '#A1EFE4'
+   white:   '#F8F8F2'
+
+  # Bright colors
+  bright:
+   black:   '#75715E'
+   red:     '#F92672'
+   green:   '#A6E22E'
+   yellow:  '#F4BF75'
+   blue:    '#66D9EF'
+   magenta: '#AE81FF'
+   cyan:    '#A1EFE4'
+   white:   '#F9F8F5'
+
+# Colors (Nightfly)
+# colors:
+#    # Default colors
+#   primary:
+#      background: '#011627'
+#      foreground: '#acb4c2'
+#
+#   cursor:
+#     text: '#fafafa'
+#     cursor: '#9ca1aa'
+#
+#   selection:
+#     text: '#080808'
+#     background: '#b2ceee'
+#
+#    # Normal colors
+#   normal:
+#     black:   '#1d3b53'
+#     red:     '#fc514e'
+#     green:   '#a1cd5e'
+#     yellow:  '#e3d18a'
+#     blue:    '#82aaff'
+#     magenta: '#c792ea'
+#     cyan:    '#7fdbca'
+#     white:   '#a1aab8'
+#
+#    # Bright colors
+#   bright:
+#     black:   '#7c8f8f'
+#     red:     '#ff5874'
+#     green:   '#21c7a8'
+#     yellow:  '#ecc48d'
+#     blue:    '#82aaff'
+#     magenta: '#ae81ff'
+#     cyan:    '#7fdbca'
+#     white:   '#d6deeb'
