@@ -33,3 +33,7 @@ Read More about it [here](https://www.baeldung.com/linux/bashrc-add-files).
 Copy profile & scheme to `settings.json` in Windows Terminal.
 
 Read more about it [here](https://learn.microsoft.com/en-us/windows/terminal/)
+
+## Alacritty Terminal
+
+Configuration of [Alacritty](https://alacritty.org/) Terminal emulator.
