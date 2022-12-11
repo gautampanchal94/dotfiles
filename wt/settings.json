@@ -85,6 +85,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#F8F8F0",
             "yellow": "#E6DB74"
-        }
+        },
+        {
+            "background": "#010C18",
+            "black": "#0B3B61",
+            "blue": "#1376F9",
+            "brightBlack": "#63686D",
+            "brightBlue": "#388EFF",
+            "brightCyan": "#FF6AD7",
+            "brightGreen": "#74FFD8",
+            "brightPurple": "#AE81FF",
+            "brightRed": "#FF54B0",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#FCF5AE",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#FF5ED4",
+            "foreground": "#ECDEF4",
+            "green": "#52FFD0",
+            "name": "CoolNight",
+            "purple": "#C792EA",
+            "red": "#FF3A3A",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#FFF383"
+        },
     ]
 }
