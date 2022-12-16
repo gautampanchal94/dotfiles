@@ -37,3 +37,14 @@ Read more about it [here](https://learn.microsoft.com/en-us/windows/terminal/)
 ## Alacritty Terminal
 
 Configuration of [Alacritty](https://alacritty.org/) Terminal emulator.
+
+## Starship Cross-Shell Prompt
+
+Configuration of [Starship]() cross-shell prompt.
+
+Add following line in `.bashrc` or `.zshrc`
+
+```sh
+eval "$(starship init $SHELL)" # bash | zsh
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+```

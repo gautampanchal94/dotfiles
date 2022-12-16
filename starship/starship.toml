@@ -1,0 +1,132 @@
+# ~/.config/starship.toml
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Change command timeout from 500 to 1000 ms
+command_timeout = 1000
+
+
+format = """
+$os \
+$username@\
+$hostname \
+\\[\
+$directory\\] \
+$git_branch\
+$git_state\
+$git_status\
+$fill\
+$time\
+$line_break\
+$shell\
+$character"""
+
+# define new color
+palette = 'ghost'
+[palettes.ghost]
+orange = "#fd971f"
+
+[os]
+format = "[$symbol](orange)"
+disabled = false
+
+[shell]
+disabled = false
+
+# Shows the username
+[username]
+style_user = "white"
+style_root = "white"
+format = "[$user](blue)"
+disabled = false
+show_always = true
+
+# shows hostname
+[hostname]
+ssh_only = false
+format = "[$hostname](bold yellow)"
+disabled = false
+
+[directory]
+truncation_length = 8
+format = "[$path]($style)[$read_only]($read_only_style)"
+read_only = " "
+
+[aws]
+symbol = "  "
+
+[c]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+
+[os.symbols]
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = " "
+Gentoo = " "
+HardenedBSD = "ﲊ "
+Illumos = " "
+Linux = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = " "
+openSUSE = " "
+OracleLinux = " "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = " "
+Solus = "ﴱ "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = " "
+
+[package]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[spack]
+symbol = "🅢 "
