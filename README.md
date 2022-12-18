@@ -6,12 +6,14 @@ Instructions for setting up Dotfiles
 
 - [Bash Files](#bash-files)
 - [Windows Terminal](#windows-terminal)
+- [Alacritty Terminal](#alacritty-terminal)
+- [Starship Cross Shell Prompt](#starship-cross-shell-prompt)
 
 ## Bash Files
 
 Add following code to the `.bashrc` file
 
-```shell
+```sh
 # adding custom configuration for bash via files
 files_to_source=("path/to/script1" "path/to/script2")
 
@@ -23,6 +25,13 @@ do
     else
         echo "File Not Found : $file_to_source"
     fi
+done
+
+#   --- Alternative ----
+
+for file in $HOME/to/location/*
+do
+    source "$file"
 done
 ```
 
@@ -40,7 +49,7 @@ Configuration of [Alacritty](https://alacritty.org/) Terminal emulator.
 
 ## Starship Cross-Shell Prompt
 
-Configuration of [Starship]() cross-shell prompt.
+Configuration of [Starship](https://starship.rs/) cross-shell prompt.
 
 Add following line in `.bashrc` or `.zshrc`
 
