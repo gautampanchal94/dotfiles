@@ -1,0 +1,13 @@
+theme = "monokai_custom"
+
+[editor]
+true-color = true
+line-number = "relative"
+mouse = false
+
+[editor.cursor-shape]
+insert = "bar"
+
+# Key Remapping
+[keys.insert]
+j = { k = "normal_mode" } # Maps jk to exit insert mode

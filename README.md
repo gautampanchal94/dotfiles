@@ -8,6 +8,7 @@ Instructions for setting up Dotfiles
 - [Windows Terminal](#windows-terminal)
 - [Alacritty Terminal](#alacritty-terminal)
 - [Starship Cross Shell Prompt](#starship-cross-shell-prompt)
+- [Helix](#helix-editor)
 
 ## Bash Files
 
@@ -57,3 +58,6 @@ Add following line in `.bashrc` or `.zshrc`
 eval "$(starship init $SHELL)" # bash | zsh
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 ```
+## Helix Editor
+
+Configuration of [Helix](https://helix-editor.com/) Editor.
