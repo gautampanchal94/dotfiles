@@ -2,6 +2,10 @@
 
 Basic settings & LSP for Helix.
 
+### Theme
+
+Customize default [monokai](https://github.com/helix-editor/helix/blob/master/runtime/themes/monokai.toml) theme.
+
 ### Font
 
 Install [`Iosevka Term`](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka) font.
