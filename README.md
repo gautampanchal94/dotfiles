@@ -9,6 +9,7 @@ Instructions for setting up Dotfiles
 - [Alacritty Terminal](#alacritty-terminal)
 - [Starship Cross Shell Prompt](#starship-cross-shell-prompt)
 - [Helix](#helix-editor)
+- [Fish Shell](#fish-shell)
 
 ## Bash Files
 
@@ -61,3 +62,7 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 ## Helix Editor
 
 Configuration of [Helix](https://helix-editor.com/) Editor.
+
+## Fish Shell
+
+Configuration and Functions of [fish](https://fishshell.com/) shell.
