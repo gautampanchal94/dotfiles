@@ -1,13 +1,53 @@
-theme = "monokai_custom"
+theme = "monokai"
 
 [editor]
-true-color = true
-line-number = "relative"
-mouse = false
+scrolloff = 5 # padding around the edge of the screen when scrolling
+mouse = false # enable mouse mode
+true-color = true # enable true color support
+line-number = "relative" # relative line numbers
+auto-format = true # format on save
+shell = ["fish", "-c"] # shell to use when running external commands
+cursorline = true # highlight all lines with a cursor
+cursorcolumn = false # highlight all columns with a cursor
+bufferline = "multiple" # display open buffers
+color-modes = true # Mode indicator with different colors
+
+# Status Line
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics","file-type", "selections", "position", "file-encoding"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
 
 [editor.cursor-shape]
 insert = "bar"
 
+[editor.whitespace.render]
+space = "none"
+tab= "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+[editor.indent-guides]
+render = true
+character = "┆"
+skip-levels = 1
+
+[editor.lsp]
+display-messages = true
+
 # Key Remapping
+[keys.normal]
+0 = "goto_line_start"
+
 [keys.insert]
 j = { k = "normal_mode" } # Maps jk to exit insert mode
