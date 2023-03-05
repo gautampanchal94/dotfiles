@@ -4,31 +4,40 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Inserts a blank line between shell prompts
-add_newline = true
+add_newline = false
 
 # Change command timeout from 500 to 1000 ms
 command_timeout = 1000
 
 
 format = """
-$os \
+\\[($env_var)\\]\
 $username@\
 $hostname \
 \\[\
 $directory\\] \
-$git_branch\
-$git_state\
-$git_status\
-$fill\
-$time\
-$line_break\
 $shell\
 $character"""
 
+right_format = """
+$git_branch\
+$git_state\
+$git_status\
+$package\
+$golang\
+$vlang\
+$rust\
+"""
 # define new color
 palette = 'ghost'
 [palettes.ghost]
 orange = "#fd971f"
+
+[env_var.STARSHIP_DISTRO]
+format = '[$env_value]($style) '
+variable = "STARSHIP_DISTRO"
+style = "orange"
+disabled = false
 
 [os]
 format = "[$symbol](orange)"
@@ -41,7 +50,7 @@ disabled = false
 [username]
 style_user = "white"
 style_root = "white"
-format = "[$user](blue)"
+format = " [$user](blue)"
 disabled = false
 show_always = true
 
@@ -52,9 +61,35 @@ format = "[$hostname](bold yellow)"
 disabled = false
 
 [directory]
-truncation_length = 8
-format = "[$path]($style)[$read_only]($read_only_style)"
-read_only = " "
+truncation_length = 1
+truncation_symbol = "…/"
+home_symbol = " ~"
+read_only_style = "197"
+read_only = "  "
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+# symbol = " "
+symbol = " "
+format = "[$symbol$branch]($style) "
+# truncation_length = 4
+truncation_symbol = "…/"
+style = "bold green"
+
+[git_status]
+# format = '[\($all_status$ahead_behind\)]($style) '
+# style = "bold green"
+# conflicted = "🏳"
+# up_to_date = " "
+# untracked = " "
+# ahead = "⇡${count}"
+# diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+# behind = "⇣${count}"
+# stashed = " "
+# modified = " "
+# staged = '[++\($count\)](green)'
+# renamed = "襁 "
+# deleted = " "
 
 [aws]
 symbol = "  "
@@ -64,9 +99,6 @@ symbol = " "
 
 [docker_context]
 symbol = " "
-
-[git_branch]
-symbol = " "
 
 [golang]
 symbol = " "
