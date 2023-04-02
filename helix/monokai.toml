@@ -35,6 +35,7 @@
 "comment" = { fg = "#88846F", modifiers = ["italic"] }
 "ui.virtual.whitespace" = "#88846F"
 "ui.virtual.ruler" = { bg = "#24241e" }
+"ui.virtual.inlay-hint" = { fg= "#88846F" }
 
 "string" = { fg = "#e6db74" }
 "constant.character" = { fg = "#e6db74" }

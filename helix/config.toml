@@ -12,10 +12,13 @@ cursorcolumn = false # highlight all columns with a cursor
 bufferline = "multiple" # display open buffers
 color-modes = true # Mode indicator with different colors
 
+[editor.soft-wrap] # enables soft-wrap for line
+enable = true
+
 # Status Line
 [editor.statusline]
 left = ["mode", "spinner"]
-center = ["file-name"]
+center = ["file-name", "version-control"]
 right = ["diagnostics","file-type", "selections", "position", "file-encoding"]
 separator = "│"
 mode.normal = "NORMAL"
@@ -44,6 +47,7 @@ skip-levels = 1
 
 [editor.lsp]
 display-messages = true
+display-inlay-hints = true
 
 # Key Remapping
 [keys.normal]
