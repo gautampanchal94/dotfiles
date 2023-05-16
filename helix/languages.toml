@@ -69,7 +69,7 @@ name = "go"
 transport = "tcp"
 command = "dlv"
 args = ["dap"]
-port-arg = "-l 127.0.0.1:{}"()
+port-arg = "-l 127.0.0.1:{}"
 
 [[language.debugger.templates]]
 name = "source"
@@ -188,7 +188,7 @@ indent = { tab-width = 2, unit = "  " }
 [language.debugger]
 name = "lldb-vscode"
 transport = "stdio"
-command = "lldb-vscode-11"
+command = "lldb-vscode"
 
 [[language.debugger.templates]]
 name = "binary"
@@ -328,12 +328,38 @@ name = "json"
 language-server = { command = "deno", args = ["lsp"], language-id = "json" }
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json" ] }
 
-### Language : Markdown
+### Language : Markdown[Deno]
+# [[language]]
+# name = "markdown"
+# language-server = { command = "deno", args = ["lsp"], language-id = "markdown" }
+# formatter = { command = 'deno', args = ["fmt", "-", "--ext", "md" ] }
+# auto-format = true
+
+### Language : Markdown[Maksman]
 [[language]]
 name = "markdown"
-language-server = { command = "deno", args = ["lsp"], language-id = "markdown" }
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "md" ] }
-auto-format = true
+scope = "source.md"
+injection-regex = "md|markdown"
+file-types = ["md", "markdown", "PULLREQ_EDITMSG"]
+roots = [".marksman.toml"]
+language-server = { command = "marksman", args=["server"] }
+indent = { tab-width = 2, unit = "  " }
+
+[[grammar]]
+name = "markdown"
+source = { git = "https://github.com/MDeiml/tree-sitter-markdown", rev = "fa6bfd51727e4bef99f7eec5f43947f73d64ea7d", subpath = "tree-sitter-markdown" }
+
+[[language]]
+name = "markdown.inline"
+scope = "source.markdown.inline"
+injection-regex = "markdown\\.inline"
+file-types = []
+roots = []
+grammar = "markdown_inline"
+
+[[grammar]]
+name = "markdown_inline"
+source = { git = "https://github.com/MDeiml/tree-sitter-markdown", rev = "fa6bfd51727e4bef99f7eec5f43947f73d64ea7d", subpath = "tree-sitter-markdown-inline" }
 
 ### Language : V
 [[language]]
@@ -350,3 +376,37 @@ indent = { tab-width = 4, unit = "\t" }
 [[grammar]]
 name = "v"
 source = { git = "https://github.com/vlang/vls", subpath = "tree_sitter_v", rev = "3e8124ea4ab80aa08ec77f03df53f577902a0cdd" }
+
+### Language: Julia
+[[language]]
+name = "julia"
+scope = "source.julia"
+injection-regex = "julia"
+file-types = ["jl"]
+roots = ["Manifest.toml", "Project.toml"]
+comment-token = "#"
+language-server = { command = "julia", timeout = 60, args = [
+    "--startup-file=no",
+    "--history-file=no",
+    "--quiet",
+    "-e",
+    "using LanguageServer; runserver()",
+    ] }
+indent = { tab-width = 4, unit = "    " }
+
+[[grammar]]
+name = "julia"
+source = { git = "https://github.com/tree-sitter/tree-sitter-julia", rev = "8fb38abff74652c4faddbf04d2d5bbbc6b4bae25" }
+
+### Language: Unision
+[[language]]
+name = "unison"
+scope = "source.unison"
+injection-regex = "unison"
+file-types = ["u"]
+shebangs = []
+roots = []
+auto-format = false
+comment-token = "--"
+indent = { tab-width = 4, unit = "    " }
+language-server = { command = "ncat", args = ["localhost", "5757"] }
