@@ -1,22 +1,19 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    set -x LS_COLORS "ow=01;34:di=01;34"
 
-    # intiate starship prompt
-    starship init fish | source
-
-    # load starship configurtation
-    if test -e $HOME/.config/starship/starship.toml;
-        set -x STARSHIP_CONFIG ~/.config/starship/starship.toml
+    # load aliases in fish shell
+    if [ -f $HOME/.config/fish/loads/aliases.fish ]
+        source $HOME/.config/fish/loads/aliases.fish
     end
 
-    # load go pkgs for hx lsp & debugger
-    if test -e $HOME/go/bin;
-        set -x PATH $HOME/go/bin $PATH
+    if test -e /usr/local/go/bin
+
+        set -x PATH /usr/local/go/bin $PATH
     end
 
-    # load all aliases
-    if [ -f $HOME/.config/fish/functions/aliases.fish ]
-        source $HOME/.config/fish/functions/aliases.fish
+    if test -e /usr/local/zig
+
+        set -x PATH /usr/local/zig $PATH
     end
 end
-
